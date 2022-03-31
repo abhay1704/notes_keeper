@@ -5,7 +5,8 @@ This Application Can be used to store, view, add and update
  short notes, like to-do's or a your next plan. 
 This App store all data in firebase('not authenticated, i.e., anyone can view and edit data with the app,because test mode of firebase is used in this project').
 
- ##installation Guidelines
+ ## installation Guidelines
+ 
 Use the flutter run command to run your Flutter app on a connected device or simulator.
 
 To run your app from the command-line:
@@ -14,10 +15,11 @@ Open a terminal and change directories to the root of your app (the same directo
 
 Run the following command. Once the flutter tool is running, if you change the app’s source code, you can hit r to hot-reload your application (updating the source on the fly without actually restarting the entire app).
 
-`$ cd notes_maker` `$ flutter run`
+`$ cd notes_maker`  `$ flutter run`
 
-##How to use
- #Home Screen
+## How to use
+ 
+ ### Home Screen
  - Here is Snapshot of Home Screen, it shows the list of activities you have added.
 
   ![alt text](https://drive.google.com/file/d/11suqIOlaI6gBLwS9HdGtN8zvVRxaBAOs/view?usp=sharing)
@@ -33,12 +35,12 @@ Run the following command. Once the flutter tool is running, if you change the a
     * Delete: By clicking on Delete, you can delete the current activity.
      ![alt Text](https://drive.google.com/file/d/11n93oIlm_OuyWHMBEj6Jg-2WgRJXZah4/view?usp=sharing)
 
-#Adding New Note Page
+### Adding New Note Page
 - Here you can add new activity in the list. 
 **_Note_**: both title and details field is compulsory.
 
 
-#Edit Notes Page
+### Edit Notes Page
 - Here you will initially provided with current activity's title and details to which you can edit
   ![alt Text](https://drive.google.com/file/d/11foNxYUgV1yOMoBRXRK3wBmOaZUZw4W2/view?usp=sharing)
 ## Warning
