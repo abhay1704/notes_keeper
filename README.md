@@ -42,12 +42,15 @@ Run the following command. Once the flutter tool is running, if you change the a
 ## ScreenShots
 
 <p float="left">
-  <img src="https://github.com/abhay1704/notes_keeper/blob/master/android/app/src/main/res/drawable/Screenshot_20220331-023528.png" width="250" />    
-  <img src="https://github.com/abhay1704/notes_keeper/blob/master/android/app/src/main/res/drawable/Screenshot_20220331-024409.png" width="250" />    
-  <img src="https://github.com/abhay1704/notes_keeper/blob/master/android/app/src/main/res/drawable/Screenshot_20220331-023628.png" width="250" />    
-  <img src="https://github.com/abhay1704/notes_keeper/blob/master/android/app/src/main/res/drawable/Screenshot_20220331-023659.png" width="250" />
+  <img src="https://github.com/abhay1704/notes_keeper/blob/master/android/app/src/main/res/drawable/Screenshot_20220331-023528.png" width="300" />                     
+  <img src="https://github.com/abhay1704/notes_keeper/blob/master/android/app/src/main/res/drawable/Screenshot_20220331-024409.png" width="300" />               
+ </br>
+  <img src="https://github.com/abhay1704/notes_keeper/blob/master/android/app/src/main/res/drawable/Screenshot_20220331-023628.png" width="250" />                     
+  <img src="https://github.com/abhay1704/notes_keeper/blob/master/android/app/src/main/res/drawable/Screenshot_20220331-023659.png" width="250" />     
 </p
+
 
  
 ## Warning
- There is no authentication or seprate database access for different users so, all the users will provided same database, hence anyone can read and write anone's other activity. "# notes_app" 
+ 
+  There is no authentication or seprate database access for different users so, all the users will provided same database, hence anyone can read and write anone's other activity. "# notes_app" 
