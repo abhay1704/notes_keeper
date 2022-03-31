@@ -20,21 +20,16 @@ Run the following command. Once the flutter tool is running, if you change the a
 ## How to use
  
  ### Home Screen
- - Here is Snapshot of Home Screen, it shows the list of activities you have added.
-
-  ![alt text](https://github.com/abhay1704/notes_keeper/blob/master/android/app/src/main/res/drawable/Screenshot_20220331-023528.png)
-
+ - Home Screen shows the list of activities you have added.
  - On Clicking any activity(on the text) you can open detailed view of that activity.
+  
   **_Note_**: Detailed view is non-editable(for editing you can use Edit option).
-
- ![alt Text](https://github.com/abhay1704/notes_keeper/blob/master/android/app/src/main/res/drawable/Screenshot_20220331-024409.png)
 
  - By Clicking on add button('+') you will redirected to another page where you can add new activities to the list.
  - By sliding any tile to the left you will get two options--
     * Edit: By clicking on Edit, you can Edit the current activites' title or its details.
     * Delete: By clicking on Delete, you can delete the current activity.
-     ![alt Text](https://github.com/abhay1704/notes_keeper/blob/master/android/app/src/main/res/drawable/Screenshot_20220331-023628.png)
-
+    
 ### Adding New Note Page
 - Here you can add new activity in the list. 
 **_Note_**: both title and details field is compulsory.
@@ -42,6 +37,19 @@ Run the following command. Once the flutter tool is running, if you change the a
 
 ### Edit Notes Page
 - Here you will initially provided with current activity's title and details to which you can edit
-  ![alt Text](https://github.com/abhay1704/notes_keeper/blob/master/android/app/src/main/res/drawable/Screenshot_20220331-023628.png)
+  
+
+## ScreenShots
+
+<p float="left">
+  <img src="https://github.com/abhay1704/notes_keeper/blob/master/android/app/src/main/res/drawable/Screenshot_20220331-023528.png" width="100" />
+  <img src="https://github.com/abhay1704/notes_keeper/blob/master/android/app/src/main/res/drawable/Screenshot_20220331-024409.png" width="100" /> 
+</p
+<p float="left"> 
+ <img src="https://github.com/abhay1704/notes_keeper/blob/master/android/app/src/main/res/drawable/Screenshot_20220331-023628.png" width="100" />
+ <img src="https://github.com/abhay1704/notes_keeper/blob/master/android/app/src/main/res/drawable/Screenshot_20220331-023628.png" width="100" />
+</p
+
+ 
 ## Warning
  There is no authentication or seprate database access for different users so, all the users will provided same database, hence anyone can read and write anone's other activity. "# notes_app" 
