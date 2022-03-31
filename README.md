@@ -42,12 +42,10 @@ Run the following command. Once the flutter tool is running, if you change the a
 ## ScreenShots
 
 <p float="left">
-  <img src="https://github.com/abhay1704/notes_keeper/blob/master/android/app/src/main/res/drawable/Screenshot_20220331-023528.png" width="100" />
-  <img src="https://github.com/abhay1704/notes_keeper/blob/master/android/app/src/main/res/drawable/Screenshot_20220331-024409.png" width="100" /> 
-</p
-<p float="left"> 
- <img src="https://github.com/abhay1704/notes_keeper/blob/master/android/app/src/main/res/drawable/Screenshot_20220331-023628.png" width="100" />
- <img src="https://github.com/abhay1704/notes_keeper/blob/master/android/app/src/main/res/drawable/Screenshot_20220331-023628.png" width="100" />
+  <img src="https://github.com/abhay1704/notes_keeper/blob/master/android/app/src/main/res/drawable/Screenshot_20220331-023528.png" width="200" />
+  <img src="https://github.com/abhay1704/notes_keeper/blob/master/android/app/src/main/res/drawable/Screenshot_20220331-024409.png" width="200" /> 
+  <img src="https://github.com/abhay1704/notes_keeper/blob/master/android/app/src/main/res/drawable/Screenshot_20220331-023628.png" width="200" />
+  <img src="https://github.com/abhay1704/notes_keeper/blob/master/android/app/src/main/res/drawable/Screenshot_20220331-023628.png" width="200" />
 </p
 
  
