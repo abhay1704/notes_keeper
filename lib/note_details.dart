@@ -29,6 +29,7 @@ class _NoteDetailState extends State<NoteDetail> {
               textScaleFactor: 2,
               style: TextStyle(
                 fontStyle: FontStyle.italic,
+                fontWeight: FontWeight.w700,
                 color: Color((math.Random().nextDouble() * 0x00FF00).toInt())
                     .withAlpha(0xff).withOpacity(1.0),
               ),
@@ -38,7 +39,7 @@ class _NoteDetailState extends State<NoteDetail> {
           ),
         ),
         color: Color((math.Random().nextDouble() * 0x00FF00).toInt())
-       .withOpacity(0.4),
+       .withOpacity(0.3),
       ),
     );
   }

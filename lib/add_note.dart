@@ -5,20 +5,21 @@ import 'dart:math' as math;
 
 
 class AddNotes extends StatelessWidget {
-  AddNotes({Key? key}) : super(key: key);
+  AddNotes({Key? key,required this.uid}) : super(key: key);
+  final String uid;
   final _formKey = GlobalKey<FormState>();
   final titlecontroller = TextEditingController();
   final detailscontroller = TextEditingController();
 
   Future<void>updateList(BuildContext context)
   async {
-    try {await FirebaseFirestore.instance.collection('notes').add({
+    try {await FirebaseFirestore.instance.collection('notes').doc(uid).collection('UserNotes').add({
       "title":titlecontroller.value.text,
       "details": detailscontroller.value.text
     }
     );
     Navigator.pop(context); } catch(e) {
-      print('e');
+      print(e.toString());
       Navigator.pop(context);
     }
   }
@@ -93,7 +94,7 @@ class AddNotes extends StatelessWidget {
                 },
                 autofocus: true ,
 
-                child: const Text('Add Contact'),
+                child: const Text('Add New Notes'),
               ),
             ],
           ),

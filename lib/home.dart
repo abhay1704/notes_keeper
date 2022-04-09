@@ -9,7 +9,8 @@ import 'edit_notes.dart';
 import 'add_note.dart';
 
 class notes_home extends StatefulWidget {
-   notes_home({Key? key}) : super(key: key);
+   notes_home({Key? key,required this.uid}) : super(key: key);
+   final String uid;
    final Notes notes = Notes();
 
   @override
@@ -28,11 +29,12 @@ class _notes_homeState extends State<notes_home> {
       child: const Icon(Icons.add),
       onPressed: () {
         Navigator.push(context, MaterialPageRoute(builder:
-        (BuildContext context) => AddNotes()));
+        (BuildContext context) => AddNotes(uid:widget.uid)));
       },
     ),
       body: StreamBuilder(
-         stream: FirebaseFirestore.instance.collection('notes').snapshots(),
+         stream: FirebaseFirestore.instance.collection('notes').doc(widget.uid).
+         collection('UserNotes').snapshots(),
         builder: (BuildContext context, AsyncSnapshot<dynamic> snapshot) {
         if(!snapshot.hasData) {
         return const Center(
@@ -47,13 +49,14 @@ class _notes_homeState extends State<notes_home> {
     title: document['title'],
     details: document['details'],
     id: document.id,
+    uid: widget.uid,
     );
     },
     ),
     ]);
     }
      ),
-    backgroundColor: Colors.yellowAccent,
+
     );
   }
   }
@@ -62,76 +65,80 @@ class _notes_homeState extends State<notes_home> {
 class activityWidget extends StatelessWidget {
   final String title;
   final String id;
+  final String uid;
   final String details;
-  const activityWidget({required this.title,required this.id,required this.details}) ;
+  const activityWidget({required this.uid,required this.title,required this.id,required this.details}) ;
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      child: Padding(
-        padding: EdgeInsets.symmetric(vertical: 10.0,horizontal: 2.0),
-        child: Slidable(
-          endActionPane: ActionPane(
-            motion: const ScrollMotion(),
-            children: [
-              SlidableAction(
-                onPressed: (context) {
-                  Navigator.push(context,
-                    MaterialPageRoute (
-                      builder: (BuildContext context) => EditNotes(id: id,title: title, details: details),
-                    ),
-                  );
-                },
-                backgroundColor: const Color(0xFF7BC043),
-                foregroundColor: Colors.white,
-                icon: Icons.edit,
-                label: 'Edit',
-              ),
-              SlidableAction(
-                onPressed: (context) {
-                  FirebaseFirestore.instance.collection('notes').doc(id).delete();
-                },
-                backgroundColor: Colors.red,
-                foregroundColor: Colors.white,
-                icon: Icons.delete,
-                label: 'Delete',
-              ),
-            ],
-          ),
-          child: ListTile(
-             leading:Icon(Icons.local_activity_rounded,
-                   size: 36.0,
-                   color: Color((math.Random().nextDouble() * 0xFFFFFF).toInt())
-                                           .withOpacity(1.0),
-                        ) ,
-            title: Padding(
-             padding:  const EdgeInsets.fromLTRB(10.0, 15.0, 4.0, 15.0),
-              child: InkWell(
-                      child: Text(title,
-                             textScaleFactor: 2,
-                             style: TextStyle(
-                             color: Color((math.Random().nextDouble() * 0xFFFFFF).toInt())
-                                        .withAlpha(0xff),
-                             fontStyle: FontStyle.italic,
-                                ),
-                       ),
-                   onTap: () {
-                              Navigator.push(context,
-                            MaterialPageRoute(
-                         builder: (BuildContext context) => NoteDetail(title: title,id: id,details: details),
-                                   )
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 8.0,vertical: 12.0),
+      child: Card(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 10.0,horizontal: 2.0),
+          child: Slidable(
+            endActionPane: ActionPane(
+              motion: const ScrollMotion(),
+              children: [
+                SlidableAction(
+                  onPressed: (context) {
+                    Navigator.push(context,
+                      MaterialPageRoute (
+                        builder: (BuildContext context) => EditNotes(uid: uid , id: id,title: title, details: details),
+                      ),
                     );
-                   },
-                   ),
-                   ),
-          trailing:const Icon(Icons.swipe,
-                        size: 36.0,),
-    tileColor: Color((math.Random().nextDouble() * 0xFFFFFF).toInt())
-          .withOpacity(0.3),
-    ),
-        ),
+                  },
+                  backgroundColor: const Color(0xFF7BC043),
+                  foregroundColor: Colors.white,
+                  icon: Icons.edit,
+                  label: 'Edit',
+                ),
+                SlidableAction(
+                  onPressed: (context) {
+                    FirebaseFirestore.instance.collection('notes').doc(id).delete();
+                  },
+                  backgroundColor: Colors.red,
+                  foregroundColor: Colors.white,
+                  icon: Icons.delete,
+                  label: 'Delete',
+                ),
+              ],
+            ),
+            child: ListTile(
+               leading:Icon(Icons.local_activity_rounded,
+                     size: 36.0,
+                     color: Color((math.Random().nextDouble() * 0xFFFFFF).toInt())
+                                             .withOpacity(1.0),
+                          ) ,
+              title: Padding(
+               padding:  const EdgeInsets.fromLTRB(10.0, 15.0, 4.0, 15.0),
+                child: InkWell(
+                        child: Text(title,
+                               textScaleFactor: 2,
+                               style: TextStyle(
+                               color: Color((math.Random().nextDouble() * 0xFFFFFF).toInt())
+                                          .withAlpha(0xff),
+                               fontStyle: FontStyle.italic,
+                                  ),
+                         ),
+                     onTap: () {
+                                Navigator.push(context,
+                              MaterialPageRoute(
+                           builder: (BuildContext context) => NoteDetail(title: title,id: id,details: details),
+                                     )
+                      );
+                     },
+                     ),
+                     ),
+            trailing:const Icon(Icons.swipe,
+                          size: 36.0,),
+      tileColor: Color((math.Random().nextDouble() * 0xFFFFFF).toInt())
+            .withOpacity(0.3),
       ),
-      shadowColor: Colors.deepPurple,
+          ),
+        ),
+        shadowColor: Colors.deepPurple,
+      ),
     );
   }
 }

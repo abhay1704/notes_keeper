@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'home.dart';
+//import 'home.dart';
 import 'package:firebase_core/firebase_core.dart';
-
+import 'login_Screen.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,7 +15,7 @@ class notes_maker extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: notes_home(),
+      home: AuthScreen(),
     );
   }
 }

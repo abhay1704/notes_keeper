@@ -5,9 +5,10 @@ import 'dart:math' as math;
 
 class EditNotes extends StatelessWidget {
   final String id;
+  final String uid;
   final String title;
   final String details;
-  EditNotes({required this.id,required this.title,required this.details,});
+  EditNotes({required this.uid,required this.id,required this.title,required this.details,});
 
   final _formKey = GlobalKey<FormState>();
 
@@ -19,7 +20,7 @@ class EditNotes extends StatelessWidget {
   Future<void>updateList(BuildContext context)
   async {
     try {
-      await FirebaseFirestore.instance.collection('notes').doc(id).update({
+      await FirebaseFirestore.instance.collection('notes').doc(uid).collection('UserNotes').doc(id).update({
         "title":titleeditcontroller.value.text,
         "details": detailseditcontroller.value.text
       });
