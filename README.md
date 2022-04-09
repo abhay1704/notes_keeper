@@ -14,10 +14,10 @@
 ##  Screenshots
 
 <div align="center"> 
-  <img src="https://github.com/abhay1704/notes_keeper/blob/master/android/app/src/main/res/screenshots/Screenshot_20220331-023528.png" />
-  <img src="https://github.com/abhay1704/notes_keeper/blob/master/android/app/src/main/res/screenshots/Screenshot_20220331-023628.png" />
-  <img src="https://github.com/abhay1704/notes_keeper/blob/master/android/app/src/main/res/screenshots/Screenshot_20220331-023659.png" />
-  <img src="https://github.com/abhay1704/notes_keeper/blob/master/android/app/src/main/res/screenshots/Screenshot_20220331-024409.png" />
+  <img src="https://github.com/abhay1704/notes_keeper/blob/master/android/app/src/main/res/screenshots/Screenshot_20220331-023528.png", width:"150" />
+  <img src="https://github.com/abhay1704/notes_keeper/blob/master/android/app/src/main/res/screenshots/Screenshot_20220331-023628.png" , width:"150"/>
+  <img src="https://github.com/abhay1704/notes_keeper/blob/master/android/app/src/main/res/screenshots/Screenshot_20220331-023659.png" , width:"150"/>
+  <img src="https://github.com/abhay1704/notes_keeper/blob/master/android/app/src/main/res/screenshots/Screenshot_20220331-024409.png" , width:"150"/>
 </div>
 
 ##  Features
@@ -27,12 +27,14 @@
 - Edit and add notes quite easily
 
 ## Installation and Running
-- Download repo and run following command:
 
+ - Download repo and run following command:
  `flutter pub get`  
- -once done run the app through your IDE.
+ - once done run the app through your IDE.
+
 ## License
-License under MIT Licesence provide in 2022.
+
+License under MIT License provided in 2022 to [abhay1704](https://github.com/abhay1704).
 
 ## Contact
 
