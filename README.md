@@ -13,10 +13,10 @@
 
 ##  Screenshots
 
-  ![](https://github.com/abhay1704/notes_keeper/blob/master/android/app/src/main/res/screenshots/Screenshot_20220331-023528.png,width=100)
-  ![](https://github.com/abhay1704/notes_keeper/blob/master/android/app/src/main/res/screenshots/Screenshot_20220331-023628.png,width=100)
-  ![](https://github.com/abhay1704/notes_keeper/blob/master/android/app/src/main/res/screenshots/Screenshot_20220331-023659.png,width=100)
-  ![](https://github.com/abhay1704/notes_keeper/blob/master/android/app/src/main/res/screenshots/Screenshot_20220331-024409.png,width=100)
+  ![](https://github.com/abhay1704/notes_keeper/blob/master/android/app/src/main/res/screenshots/Screenshot_20220331-023528.png, width="100")
+  ![](https://github.com/abhay1704/notes_keeper/blob/master/android/app/src/main/res/screenshots/Screenshot_20220331-023628.png, width="100")
+  ![](https://github.com/abhay1704/notes_keeper/blob/master/android/app/src/main/res/screenshots/Screenshot_20220331-023659.png, width="100")
+  ![](https://github.com/abhay1704/notes_keeper/blob/master/android/app/src/main/res/screenshots/Screenshot_20220331-024409.png, width="100")
 
 ##  Features
 
