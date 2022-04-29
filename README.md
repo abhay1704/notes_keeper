@@ -7,9 +7,9 @@
 <br />
 
 ## About the Project
--This is a very good app to use it as collection of short notes.
--This is made with help of firebase so will work properly in online-mode only.
--It has lots of color to makes notes beautiful.
+- This is a very good app to use it as collection of short notes.
+- This is made with help of firebase so will work properly in online-mode only.
+- It has lots of color to makes notes beautiful.
 
 ##  Screenshots
    <div>
